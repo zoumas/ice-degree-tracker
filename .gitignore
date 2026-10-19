@@ -1,0 +1,6 @@
+# Personal transcripts must never be committed.
+*.xlsx
+*.xls
+*.csv
+.DS_Store
+node_modules/

@@ -1,0 +1,11 @@
+{
+  "name": "ice-degree-tracker",
+  "private": true,
+  "description": "Πρόοδος πτυχίου για το Τμήμα Μηχανικών Πληροφορικής και Υπολογιστών, ΠΑΔΑ",
+  "license": "MIT",
+  "scripts": {
+    "test": "node --test",
+    "start": "python3 -m http.server 8000"
+  },
+  "engines": { "node": ">=20" }
+}

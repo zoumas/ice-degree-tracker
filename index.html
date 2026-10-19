@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Πρόοδος Πτυχίου ICE</title>
+  <meta name="description" content="Δες τι έχεις περάσει, τι λείπει για το πτυχίο και υπολόγισε τον βαθμό πτυχίου. Τμήμα Μηχανικών Πληροφορικής και Υπολογιστών, ΠΑΔΑ.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=GFS+Didot&family=Commissioner:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="eyebrow" id="dept"></span>
+    <h1>Πρόοδος Πτυχίου</h1>
+    <p>Τι έχεις περάσει, τι λείπει για το πτυχίο, και ο βαθμός πτυχίου (σταθμισμένος με ECTS). Γράψε βαθμό σε όποιο μάθημα λείπει και ο μέσος όρος ενημερώνεται αμέσως. Οι προβλέψεις φαίνονται με <span class="proj-text">μπλε-γκρι</span>.</p>
+  </header>
+
+  <div class="controls">
+    <label class="filebtn primary" for="upload">Φόρτωσε την καρτέλα σου (.xlsx)<input type="file" id="upload" accept=".xlsx,.xls"></label>
+    <label for="stream">Ροή <select id="stream"></select></label>
+    <label for="internship"><input type="checkbox" id="internship"> Πρακτική Άσκηση (αντικαθιστά 1 ΕΥ)</label>
+    <button type="button" id="clear">Καθάρισε προβλέψεις</button>
+    <button type="button" id="reset" hidden>Επαναφορά στο παράδειγμα</button>
+  </div>
+  <div class="banner" id="banner"></div>
+
+  <div class="summary" id="summary"></div>
+
+  <section>
+    <h2>Τι λείπει για το πτυχίο</h2>
+    <div class="reqs" id="reqs"></div>
+  </section>
+
+  <section>
+    <h2>Στόχος βαθμού</h2>
+    <div class="target">
+      <label for="goal">Θέλω πτυχίο με <input type="number" id="goal" min="5" max="10" step="0.1" value="7.5"></label>
+      <span id="goalOut"></span>
+    </div>
+  </section>
+
+  <section>
+    <h2>Περασμένα μαθήματα</h2>
+    <div class="ledger"><table id="ledger"></table></div>
+  </section>
+
+  <section>
+    <h2>Κανόνες που εφαρμόζονται</h2>
+    <ul class="rules" id="rules"></ul>
+  </section>
+
+  <footer>
+    Η καρτέλα διαβάζεται μόνο στον browser σου. Δεν ανεβαίνει πουθενά. Ανεπίσημο εργαλείο: για τον τελικό βαθμό ισχύει ό,τι βγάλει η Γραμματεία.
+    <span id="checked"></span>
+  </footer>
+</div>
+
+<script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"
+        integrity="sha384-EnyY0/GSHQGSxSgMwaIPzSESbqoOLSexfnSMN2AP+39Ckmn92stwABZynq1JyzdT" crossorigin="anonymous"></script>
+<script src="js/curriculum.js"></script>
+<script src="js/degree.js"></script>
+<script src="js/sample.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
