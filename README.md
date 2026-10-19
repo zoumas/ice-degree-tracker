@@ -38,7 +38,7 @@
 
 ```
 index.html          σελίδα
-css/styles.css      εμφάνιση (παλέτα Figma "Ink wash")
+css/styles.css      εμφάνιση (παλέτα Figma "Stormy morning")
 js/curriculum.js    πρόγραμμα σπουδών και κανόνες
 js/degree.js        λογική (χωρίς DOM, με tests)
 js/app.js           διεπαφή
